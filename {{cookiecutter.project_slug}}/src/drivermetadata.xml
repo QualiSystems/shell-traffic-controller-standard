@@ -1,0 +1,28 @@
+<Driver Description="{{cookiecutter.project_short_description}}" MainClass="driver.{{cookiecutter.driver_name}}" Name="{{cookiecutter.driver_name}}" Version="1.0.0">
+    <Layout>
+        <Command Description="Load the test configuration file" DisplayName="Load Configuration" Name="load_configuration">
+            <Parameters>
+                    <Parameter Name="config_file_location" Type="String" Mandatory="True"
+                               DisplayName="Config File Location" Description="The full path in which the configuration file exist. Should include the file name"/>
+                </Parameters>
+        </Command>
+        <Command Description="Send ARP to populate ARP tables" DisplayName="Send ARP" Name="send_arp" />
+        <Command Description="Start device/protocols emulations" DisplayName="Start Emulation" Name="start_emulation" />
+        <Command Description="Stop device/protocols emulations" DisplayName="Stop Emulation" Name="stop_emulation" />
+        <Command Description="Start to run traffic" DisplayName="Start Traffic" Name="start_traffic">
+            <Parameters>
+                <Parameter Name="blocking" Type="Lookup" AllowedValues="Yes,No" DefaultValue="Yes" Mandatory="True" DisplayName="Blocking"
+                Description="If set to true, the command will complete ONLY when the test/traffic based on the configuration file is completed and thus no other command can be executed during this time. The default value should be false - in this case the command will complete once the test/traffic is executed" />
+            </Parameters>
+        </Command>
+        <Command Description="Stop to run traffic" DisplayName="Stop Traffic" Name="stop_traffic" />
+        <Command Description="Get the test/traffic statistics" DisplayName="Get Statistics" Name="get_statistics">
+            <Parameters>
+                <Parameter Name="view_name" Type="String" Mandatory="True"
+                           DisplayName="View Name" Description="The name of the view for which we want to get its statistics"/>
+                <Parameter Name="output_type" Type="String" Mandatory="True"
+                           DisplayName="Output Type" Description="The format of the file in which the statistics will be displayed. The options are: &quot;CSV&quot; or &quot;JSON&quot;. Default value is &quot;CSV&quot;"/>
+            </Parameters>
+        </Command>
+    </Layout>
+</Driver>
