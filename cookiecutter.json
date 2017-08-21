@@ -2,7 +2,6 @@
 	"full_name": "Anonymous",
 	"email": "info@quali.com",
 	"github_username": "qualisystemslab",
-	"category" : "App Management",
 	"project_name": "Shell",
 	"family_name" : "Traffic Controller",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-','_') }}",
