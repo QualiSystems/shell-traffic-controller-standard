@@ -73,3 +73,10 @@ class {{cookiecutter.driver_name}} (ResourceDriverInterface):
         :rtype: str
         """
         pass
+        
+    def cleanup(self):
+        """
+        Destroy the driver session, this function is called everytime a driver instance is destroyed
+        This is a good place to close any open sessions, finish writing to log files
+        """
+        pass
