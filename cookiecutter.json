@@ -14,5 +14,8 @@
 	"version": "0.1.0",
 	"server_version" : "8.2",
 	"use_pypi_deployment_with_travis": "y",
-    "service_category": "Traffic Controllers"
+    "service_category": "Traffic Controllers",
+    "template_name" : "gen1/traffic-controller-service",
+    "template_descr" : "1st generation shell template for cloud service",
+    "template_repository" : "https://github.com/QualiSystems/shell-traffic-controller-standard"
 }
